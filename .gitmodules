@@ -1,0 +1,3 @@
+[submodule "Managed.X86"]
+	path = Managed.X86
+	url = git@github.com:txdv/Managed.X86.git
