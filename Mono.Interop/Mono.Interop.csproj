@@ -39,6 +39,7 @@
     <Compile Include="CAction.cs" />
     <Compile Include="CFunc.cs" />
     <Compile Include="Memory.cs" />
+    <Compile Include="BufferPin.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
