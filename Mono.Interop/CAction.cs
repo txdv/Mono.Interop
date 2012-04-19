@@ -9,7 +9,7 @@ namespace Mono.Interop
 
 		public CActionBase()
 		{
-			GCHandle = GCHandle.Alloc(this, GCHandleType.Pinned);
+			GCHandle = GCHandle.Alloc(this);
 		}
 		~CActionBase()
 		{
@@ -27,7 +27,9 @@ namespace Mono.Interop
 				GC.SuppressFinalize(this);
 			}
 
-			GCHandle.Free();
+			if (GCHandle.IsAllocated) {
+				GCHandle.Free();
+			}
 		}
 	}
 	
